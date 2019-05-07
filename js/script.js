@@ -1,11 +1,14 @@
-var shoppingList= ["Pears", "Milk", "Bread", "Egg", "Cheese"]
-console.log(shoppingList);
+var items= [];
+//console.log(shoppingList);
 
-
-
-function namePrompt(){
-  console.log("this is name prompt");
-  var name= prompt ("What's on your shopping List?");
-  //console.log("Hello" + name);
-  document.getElementById('shoppingItems');
+function addToList(){
+  //console.log("this is prompt");
+  var newItem= prompt ("What do you want to add to List?");
+  console.log(newItem);
+  if (newItem.length > 0) {
+    document.getElementById("List").innerHTML += "<li>" +newItem+ "</li>";
+    items.push(newItem);
+    console.log(items);
+  }else
+  console.log("please enter a value");
 }
